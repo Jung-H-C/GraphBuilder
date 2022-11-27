@@ -3,15 +3,15 @@ from PyQt5.QtWidgets import *
 # from PyQt5 import uic
 from graphbuild_demo_3 import Ui_MainWindow
 import matplotlib.pyplot as plt
+import matplotlib as mat
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
-# from matplotlib import font_manager, rc
+
 from superqt import QRangeSlider
 
-# font_path = "C:/Users/XOTOURLLIFE/AppData/Local/Microsoft/Windows/Fonts/gulim.ttc"
-# font = font_manager.FontProperties(fname=font_path).get_name()
-# rc('font', family=font)
+mat.rcParams['font.family'] = 'Gulim'
+
 
 # hello
 class graphBuilder(QMainWindow):
