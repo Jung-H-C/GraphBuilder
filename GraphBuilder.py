@@ -6,10 +6,14 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
+# from matplotlib import font_manager, rc
 from superqt import QRangeSlider
 
+# font_path = "C:/Users/XOTOURLLIFE/AppData/Local/Microsoft/Windows/Fonts/gulim.ttc"
+# font = font_manager.FontProperties(fname=font_path).get_name()
+# rc('font', family=font)
 
-
+# hello
 class graphBuilder(QMainWindow):
     def __init__(self):
         super(graphBuilder, self).__init__()

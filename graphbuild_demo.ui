@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1074</width>
+    <height>654</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1021</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>기본</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>275</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Build</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_blue">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>249</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>파랑</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_red">
+      <property name="geometry">
+       <rect>
+        <x>122</x>
+        <y>249</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>빨강</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_black">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>249</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>검정</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>247</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>색상</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_custom">
+      <property name="geometry">
+       <rect>
+        <x>217</x>
+        <y>249</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>사용자 설정</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_marker">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>216</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>point marker</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pixel marker</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>circle marker</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>square marker</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>217</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>마커</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>187</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>선 종류</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_line">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>186</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>solid line style</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dashed line style</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dash-dot line style</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>dotted line style</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_x_label">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>58</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>59</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>x축 라벨</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="graph_frame">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>661</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>124</y>
+        <width>56</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>y축 라벨</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_y_label">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>120</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>89</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>x값</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>150</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>y값</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_x_value">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_y_value">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>150</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_clear">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>276</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>10</y>
+        <width>351</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>200</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Build</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1074</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuAbout"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
