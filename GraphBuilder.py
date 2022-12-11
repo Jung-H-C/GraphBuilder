@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 # from PyQt5 import uic
-from graphbuild_demo_3 import Ui_MainWindow
+from graphBuilder_ui import Ui_MainWindow
 import matplotlib.pyplot as plt
 import matplotlib as mat
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -9,33 +9,38 @@ from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as Navigatio
 from matplotlib.figure import Figure
 
 from superqt import QRangeSlider
+from PyQt5.QtGui import QPixmap, QIcon
 
 mat.rcParams['font.family'] = 'Gulim'
 
 
-# hello
 class graphBuilder(QMainWindow):
     def __init__(self):
         super(graphBuilder, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.pixmap = QPixmap('images/main.jpg')
 
         self.setWindowTitle('GraphBuilder')
-        # self.center()
+        self.setWindowIcon(QIcon('images/icon.png'))
 
         self.map = MapCanvas(self, self.ui.graph_frame.width()/100, self.ui.graph_frame.height()/100)
         self.ui.graph_frame.layout().addWidget(self.map)
         self.toolbar = NavigationToolbar(self.map, self)
         self.ui.graph_frame.layout().addWidget(self.toolbar)
+        self.ui.label_pic.setPixmap(self.pixmap)
 
         self.ui.lineEdit_x_label.textChanged[str].connect(self.map.onXLabelChanged)
         self.ui.lineEdit_y_label.textChanged[str].connect(self.map.onYLabelChanged)
         self.ui.comboBox_line.activated[str].connect(self.map.LineChanged)
         self.ui.pushButton_2.clicked.connect(self.graphBuildButton)
         self.ui.pushButton_clear.clicked.connect(self.map.clear_map)
+        
 
-        # self.ui.textEdit_data
-    
+        self.ui.actionExit.setShortcut('Ctrl+E')
+        self.ui.actionExit.setStatusTip('Exit Application')
+        self.ui.actionExit.triggered.connect(qApp.quit)
+
 
     def graphBuildButton(self):
         x_input = self.ui.lineEdit_x_value.text()
@@ -60,24 +65,6 @@ class graphBuilder(QMainWindow):
             self.map.y_data = y_input_list
 
             self.map.plot_map()
-
-        # print(self.map.y_data)
-
-    # def initUI(self):
-    #     self.setWindowTitle('GraphBuilder')
-    #     # self.resize(500, 350)
-    #     # self.center()
-    #     self.show()
-
-    # def graphBuildButton(self):
-
-    #     canvas = FigureCanvas(Figure(figsize=(4, 3)))
-    #     self.verticalLayout.addWidget(canvas)
-
-    #     self.addToolBar(NavigationToolbar(canvas, self))
-
-    #     # self.ax = canvas.figure.subplots()
-    #     # self.ax.plot([0, 1, 2], [1, 5, 3], '-')
 
 
 
